@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"> <!-- Fuente Dancing Script -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <style>
+        body {
+            background-image: url('images/portada.jpg'); /* Reemplaza con la URL de una imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para el texto */
+            padding: 50px;
+            border-radius: 10px;
+            width: 400px;
+            display: flex;
+            align-items: center; /* Para alinear el ícono y el texto */
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Dancing Script', cursive; /* Usamos la fuente Dancing Script */
+            font-size: 45px;
+            margin-bottom: 20px;
+            color: white; 
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para darle un toque bonito */
+        }
+
+        h2 i {
+            margin-left: 10px; /* Espacio entre el texto y el ícono */
+            font-size: 40px; /* Tamaño del ícono */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ff69b4;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff1493;
+        }
+
+        iframe {
+            display: none;
+            width: 90%;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 10px;
+            /* Centrado usando Flexbox */
+            align-self: center; /* Centrado horizontal */
+            justify-self: center;
+        }
+
+        p{
+            font-family: 'Dancing Script', cursive;
+            font-size: 25px;
+        }
+
+        .mensaje {
+            display: none;
+            font-family: 'Dancing Script', cursive;
+            font-size: 25px;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Hola Sheyla <i class="fas fa-chess-queen"></i></h2>
+    <button onclick="mostrarPagina()" id="mensajeSecundario">Clic para Abrir</button>
+    <p id="mensajeInicial">Espero que te guste</p>
+    <p id="mensajeFinal" class="mensaje">Se que estos días han sido dificiles para ti<br> 
+    Yo se que vas a estar bien aunque no se sienta ahora, pero recuerda cuanto vales.  <br>
+    Tal vez no sepa como ayudarte, pero estaré para escucharte no lo olvides.<br> 
+    Las risas no van a faltar ya veras, me pasa cada cosa<br> 
+    Hay personas que quisieran verte bien<br>
+    Tu puedes con todo</p> 
+    <iframe id="miIframe" src="images/regalo.png"  title="Regalo"></iframe>
+</div>
+
+<script>
+    function mostrarPagina() {
+        // Muestra el mensaje final y oculta el inicial
+        document.getElementById('mensajeInicial').style.display = 'none';
+        document.getElementById('mensajeSecundario').style.display = 'none';
+        document.getElementById('mensajeFinal').style.display = 'block';
+        // Muestra el iframe (regalo)
+        document.getElementById('miIframe').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
